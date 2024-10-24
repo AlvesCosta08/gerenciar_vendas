@@ -108,7 +108,7 @@ $id_usu = $res[0]['id'];
 
          <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Vendas / Caixas
+            Vendas / Ponto de Venda
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
            <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu9 ?>">Vendas</a></li>
@@ -151,6 +151,10 @@ $id_usu = $res[0]['id'];
 
         <li class="nav-item">
           <a class="nav-link" href="../painel-financeiro" target="_blank">Painel Financeiro</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../painel-vendedor" target="_blank">Painel Vendedor</a>
         </li>
         
       </ul>

@@ -7,7 +7,7 @@ $email_adm = 'contato@gmail.com';
  //é preciso configurar essa url para gerar os relatorios, ela deve apontar para a raiz do seu dominio (https://www.google.com/) com a barra no final e o protocolo http ou https de acordo com seu dominio no inicio.
 $url_sistema = "https://$_SERVER[HTTP_HOST]/";
 $url = explode("//", $url_sistema);
-if($url[1] == 'localhost/'){
+if($url[1] == 'codigoquatro.com.br/'){
 	$url_sistema = "http://$_SERVER[HTTP_HOST]/ger_vendas/";
 }
 
@@ -25,6 +25,12 @@ $servidor = 'localhost';
 $usuario = 'root';
 $senha_bd = '';
 $banco = 'pdv';
+
+//VARIAVEIS PARA O BANCO DE DADOS LOCAL
+//$servidor = '108.167.151.55';
+//$usuario = 'codig267_ger_vendas';
+//$senha_bd = 'Alves1974#';
+//$banco = 'codig267_ger_vendas';
 
 
 //VARIAVEIS DE CONFIGURAÇÕES DO SISTEMA

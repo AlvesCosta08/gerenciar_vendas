@@ -28,11 +28,11 @@ $query_con = $pdo->prepare("SELECT * from usuarios WHERE (email = :usuario or cp
 
 		if($nivel == 'Operador'){
 			echo "<script>localStorage.setItem('id_usu', '$id')</script>";
-			echo "<script language='javascript'>window.location='painel-operador'</script>";
+			echo "<script language='javascript'>window.location='painel-vendedor'</script>";
 		}
 
 		if($nivel == 'Tesoureiro'){
-			echo "<script language='javascript'>window.location='painel-tesoureiro'</script>";
+			echo "<script language='javascript'>window.location='painel-financeiro'</script>";
 		}
 	}else{
 
