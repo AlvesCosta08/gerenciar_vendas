@@ -77,7 +77,7 @@ $id_usu = $res[0]['id'];
 
             <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu3 ?>">Fornecedores</a></li>
 
-             <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu7 ?>">Caixas</a></li>
+             <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu7 ?>">Ponto de Venda</a></li>
 
               <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu8 ?>">Formas de Pagamento</a></li>   
 
@@ -113,7 +113,7 @@ $id_usu = $res[0]['id'];
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
            <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu9 ?>">Vendas</a></li>
 
-             <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu10 ?>">Caixas</a></li>
+             <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu10 ?>">Ponto de Venda</a></li>
            
            
           </ul>
@@ -150,7 +150,7 @@ $id_usu = $res[0]['id'];
 
 
         <li class="nav-item">
-          <a class="nav-link" href="../painel-tesoureiro" target="_blank">Painel Tesouraria</a>
+          <a class="nav-link" href="../painel-financeiro" target="_blank">Painel Financeiro</a>
         </li>
         
       </ul>

@@ -2,13 +2,13 @@
 require_once("conexao.php");
 
 //RETIRAR ISSO DEPOIS
-//Criar um Usuário Super com nivel de bispo padrão
+//Criar um Usuário Super com nivel de admin padrão
 $query = $pdo->query("SELECT * FROM usuarios where nivel = 'Administrador'");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 $total_reg = count($res);
 
 if($total_reg == 0)
-$pdo->query("INSERT INTO usuarios SET nome = 'Administrador', email = 'contato@hugocursos.com.br', cpf = '000.000.000-00', senha = '123', nivel = 'Administrador' ");
+$pdo->query("INSERT INTO usuarios SET nome = 'Administrador', email = 'contato@gmail.com', cpf = '000.000.000-00', senha = '123', nivel = 'Administrador' ");
 
  ?>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ $pdo->query("INSERT INTO usuarios SET nome = 'Administrador', email = 'contato@h
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/login/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
@@ -36,41 +36,89 @@ $pdo->query("INSERT INTO usuarios SET nome = 'Administrador', email = 'contato@h
 <!--===============================================================================================-->	
 	<link rel="stylesheet" type="text/css" href="vendor/login/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/login/css/util.css">
-	<link rel="stylesheet" type="text/css" href="vendor/login/css/main.css">
+	<!--<link rel="stylesheet" type="text/css" href="vendor/login/css/util.css">
+	<link rel="stylesheet" type="text/css" href="vendor/login/css/main.css"> -->
 
 	<link rel="shortcut icon" href="img/favicon.ico" />
 
 <!--===============================================================================================-->
+<style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .limiter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('vendor/login/images/bg-01.jpg') no-repeat center center/cover;
+        }
+        .wrap-login100 {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .login100-form-title img {
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .wrap-input100 {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .input100 {
+            width: 100%;
+            padding: 15px 40px 15px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .focus-input100 {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #a83a32;
+        }
+        .login100-form-btn {
+            background-color: #a83a32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            width: 100%;
+            font-size: 16px;
+        }
+        .login100-form-btn:hover {
+            background-color: #911f1a;
+        }
+    </style>
 </head>
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('vendor/login/images/bg-01.jpg');">
-			<div class="wrap-login100 p-t-30 p-b-50">
-				<span class="login100-form-title p-b-41">
-					<img src="img/logo.png" width="100">
-				</span>
-				<form class="login100-form validate-form p-b-33 p-t-5" method="POST" action="autenticar.php">
-
-					<div class="wrap-input100 validate-input" data-validate = "Email ou CPF">
-						<input class="input100" type="text" name="usuario" placeholder="Email ou CPF" required="" value="">
-						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Email ou CPF">
-						<input class="input100" type="password" name="senha" placeholder="Senha" required="" value="">
-						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
-					</div>
-
-					<div class="container-login100-form-btn m-t-32">
-						<button type="submit" class="login100-form-btn">
-							Entrar
-						</button>
-					</div>
-
-				</form>
-			</div>
+		<div class="wrap-login100">
+			<span class="login100-form-title">
+				<img src="img/logo.png" width="100" alt="Logo">
+			</span>
+			<form class="login100-form" method="POST" action="autenticar.php">
+				<div class="wrap-input100">
+					<input class="input100" type="text" name="usuario" placeholder="Email ou CPF" required>
+					<span class="focus-input100"><i class="fas fa-user"></i></span>
+				</div>
+				<div class="wrap-input100">
+					<input class="input100" type="password" name="senha" placeholder="Senha" required>
+					<span class="focus-input100"><i class="fas fa-lock"></i></span>
+				</div>
+				<div class="container-login100-form-btn">
+					<button type="submit" class="login100-form-btn">Entrar</button>
+				</div>
+			</form>
 		</div>
 	</div>
 	

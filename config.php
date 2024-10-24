@@ -1,21 +1,21 @@
 <?php 
 
 //VARIAVEIS GLOBAIS
-$nome_sistema = "PDV FREITAS";
-$email_adm = 'contato@hugocursos.com.br';
+$nome_sistema = "GESTÃO DE VNDAS";
+$email_adm = 'contato@gmail.com';
 
  //é preciso configurar essa url para gerar os relatorios, ela deve apontar para a raiz do seu dominio (https://www.google.com/) com a barra no final e o protocolo http ou https de acordo com seu dominio no inicio.
 $url_sistema = "https://$_SERVER[HTTP_HOST]/";
 $url = explode("//", $url_sistema);
 if($url[1] == 'localhost/'){
-	$url_sistema = "http://$_SERVER[HTTP_HOST]/pdv/";
+	$url_sistema = "http://$_SERVER[HTTP_HOST]/ger_vendas/";
 }
 
 
 
-$telefone_sistema = "(31) 97527-5084";
-$endereco_sistema = "Rua X Nº 200 Centro - BH - MG";
-$rodape_relatorios = "Sistema Desenvolvido por Hugo Vasconcelos do Portal Hugo Cursos!";
+$telefone_sistema = "(99) 99999-9999";
+$endereco_sistema = "Rua X Nº 200 Centro - MARANGUAPE - CE";
+$rodape_relatorios = "Sistema Desenvolvido por CÓDIGOQUATRO-SOLUÇÕES!";
 $cnpj_sistema = '00.000.000/0001-00';
 $fonte_comprovante = '11';
 
@@ -38,7 +38,7 @@ $cabecalho_img_rel = 'Sim'; // Se você optar por sim, os relatórios serão exi
 
 $desconto_porcentagem = 'Sim'; //Se essa variavel receber sim o desconto aplicado na tela de pdv será em %, caso contrário ele será em R$.
 
-$cupom_fiscal = 'Não'; //Se você utilizar sim, ele irá apontar para a api que vai gerar o cupom fiscal(Não configurado nesse curso, você vai precisar utilizar uma api externa para isso um dos modelos pode ser encontrado em https://plugnotas.com.br), caso contrário ele gera o cupom não fiscal já configurado no curso.
+$cupom_fiscal = 'Não'; //Se você utilizar sim, ele irá apontar para a api que vai gerar o cupom fiscal(Não configurado nesse curso, você vai precisar utilizar uma api externa para isso um dos modelos pode ser encontrado em https://plugnotas.com.br), caso contrário ele gera o cupom não fiscal já configurado.
 
 $largura_cod_barras = 3; //Usar 2 ou 3, 2 ficará com uma lagura um pouco menor o codigo de barras (só se for um produto muito pequeno);
 
