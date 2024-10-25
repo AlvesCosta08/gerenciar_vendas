@@ -56,7 +56,7 @@ $id_usu = $res[0]['id'];
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php">
-    	<img src="../img/logo-texto-escuro.png" width="100">
+    	<img src="../img/logotipo_sm.png" width="150">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

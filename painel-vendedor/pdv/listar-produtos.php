@@ -6,7 +6,15 @@ $id_usuario = $_POST['id_usuario'];
 //RECUPERAR O NOME DO CAIXA
 $query_con = $pdo->query("SELECT * FROM caixa WHERE operador = '$id_usuario' and status = 'Aberto'");
 $res = $query_con->fetchAll(PDO::FETCH_ASSOC);
-$nome_caixa = $res[0]['caixa'];
+
+// Verifique se há resultados antes de acessar o índice 0
+if (count($res) > 0) {
+    $nome_caixa = $res[0]['caixa'];
+} else {
+    // Definir "Administrador" como nome do caixa quando não houver resultados
+    $nome_caixa = 'Administrador';
+}
+
 
 echo '<ul class="order-list">';
 
