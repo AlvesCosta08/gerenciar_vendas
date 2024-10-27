@@ -98,10 +98,8 @@ $id_usu = $res[0]['id'];
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu5 ?>">Cadastro de Produtos</a></li>
             <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu4 ?>">Cadastro de Categorias</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu6 ?>">Lista de Compras</a></li>
-            <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu11 ?>">Estoque Baixo</a></li>
-            <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu13 ?>">Alertas Vencimento</a></li>
+            <li><hr class="dropdown-divider"></li>           
+            <li><a class="dropdown-item disabled" href="index.php?pagina=<?php echo $menu11 ?>">Estoque Baixo</a></li>            
           </ul>
         </li>
 
@@ -113,7 +111,7 @@ $id_usu = $res[0]['id'];
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
            <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu9 ?>">Vendas</a></li>
 
-             <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu10 ?>">Ponto de Venda</a></li>
+             <li><a class="dropdown-item disabled" href="index.php?pagina=<?php echo $menu10 ?>">Ponto de Venda</a></li>
            
            
           </ul>
@@ -127,22 +125,22 @@ $id_usu = $res[0]['id'];
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="../rel/relProdutos_class.php" target="_blank">Relatório de Produtos</a></li>
 
-             <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#ModalRelCompras">Relatório de Compras</a></li>
+             <li><a class="dropdown-item disabled" href="" data-bs-toggle="modal" data-bs-target="#ModalRelCompras">Relatório de Compras</a></li>
 
-             <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#ModalRelVendas">Relatório de Vendas</a></li>
+             <li><a class="dropdown-item disabled" href="" data-bs-toggle="modal" data-bs-target="#ModalRelVendas">Relatório de Vendas</a></li>
 
-             <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#ModalRelProdVendidos">Relatório de Produtos Vendidos</a></li>
+             <li><a class="dropdown-item disabled" href="" data-bs-toggle="modal" data-bs-target="#ModalRelProdVendidos">Relatório de Produtos Vendidos</a></li>
 
-             <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#ModalRelQuebras">Relatório de Quebras</a></li>
+             <li><a class="dropdown-item disabled" href="" data-bs-toggle="modal" data-bs-target="#ModalRelQuebras">Relatório de Quebras</a></li>
 
-              <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#ModalRelLucro">Relatório de Lucro</a></li>
+              <li><a class="dropdown-item disabled" href="" data-bs-toggle="modal" data-bs-target="#ModalRelLucro">Relatório de Lucro</a></li>
 
-                 <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#ModalRelContasReceber">Relatório Contas Receber</a></li>
+                 <li><a class="dropdown-item disabled" href="" data-bs-toggle="modal" data-bs-target="#ModalRelContasReceber">Relatório Contas Receber</a></li>
 
-                  <li><a class="dropdown-item" href="../rel/relContasReceberVencidas_class.php" target="_blank">Relatório Contas Receber Vencidas</a></li>
+                  <li><a class="dropdown-item disabled" href="../rel/relContasReceberVencidas_class.php" target="_blank">Relatório Contas Receber Vencidas</a></li>
 
 
-                    <li><a class="dropdown-item" href="../rel/alertas_class.php" target="_blank">Relatório Produtos Vencendo</a></li>
+                    <li><a class="dropdown-item disabled" href="../rel/alertas_class.php" target="_blank">Relatório Produtos Vencendo</a></li>
            
            
           </ul>
@@ -150,7 +148,7 @@ $id_usu = $res[0]['id'];
 
 
         <li class="nav-item">
-          <a class="nav-link" href="../painel-financeiro" target="_blank">Painel Financeiro</a>
+          <a class="nav-link disabled" href="../painel-financeiro" target="_blank">Painel Financeiro</a>
         </li>
 
         <li class="nav-item">

@@ -14,23 +14,23 @@ if($url[1] == 'codigoquatro.com.br/'){
 
 
 $telefone_sistema = "(99) 99999-9999";
-$endereco_sistema = "Rua X Nº 200 Centro - MARANGUAPE - CE";
+$endereco_sistema = "RUA ELSA DOS SANTOS FEITAS,122 - EUSÉBIO - CE";
 $rodape_relatorios = "Sistema Desenvolvido por CÓDIGOQUATRO-SOLUÇÕES!";
 $cnpj_sistema = '00.000.000/0001-00';
 $fonte_comprovante = '11';
 
 
 //VARIAVEIS PARA O BANCO DE DADOS LOCAL
-$servidor = 'localhost';
-$usuario = 'root';
-$senha_bd = '';
-$banco = 'pdv';
+//$servidor = 'localhost';
+//$usuario = 'root';
+//$senha_bd = '';
+//$banco = 'pdv';
 
 //VARIAVEIS PARA O BANCO DE DADOS LOCAL
-//$servidor = '108.167.151.55';
-//$usuario = 'codig267_ger_vendas';
-//$senha_bd = 'Alves1974#';
-//$banco = 'codig267_ger_vendas';
+$servidor = '108.167.151.55';
+$usuario = 'codig267_ger_vendas';
+$senha_bd = 'Alves1974#';
+$banco = 'codig267_ger_vendas';
 
 
 //VARIAVEIS DE CONFIGURAÇÕES DO SISTEMA

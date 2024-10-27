@@ -2,7 +2,7 @@
 require_once("../conexao.php"); 
 
 $codigo = $_GET['codigo'];
-$nome = $_GET['nome'];
+$item = $_GET['item'];
 $valor = $_GET['valor'];
 $valor = number_format($valor, 2, ',', '.');
 require_once('classe_barras.php');
@@ -37,7 +37,7 @@ require_once('classe_barras.php');
 <?php for($i=0; $i<$etiquetas_por_linha; $i++){ ?>
 
 <span class="margem">
-<small><small><?php echo $nome ?> <br>R$ <?php echo $valor ?></small></small>
+<small><small><?php echo $item ?> <br>R$ <?php echo $valor ?></small></small>
 <br>
 <?php 
 echo geraCodigoBarra($codigo, $largura_cod_barras, $altura_cod_barras); 
@@ -54,5 +54,16 @@ echo geraCodigoBarra($codigo, $largura_cod_barras, $altura_cod_barras);
 <?php } ?>
 
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="icon" type="image/png" href="vendor/login/images/icons/favicon.ico" />
+</head>
+<body>
+	
+</body>
+</html>
 

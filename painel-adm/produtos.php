@@ -79,16 +79,13 @@ require_once('verificar-permissao.php');
                     <a href="index.php?pagina=<?php echo $pag ?>&funcao=deletar&id=<?php echo $res[$i]['id'] ?>" title="Excluir Registro" style="text-decoration: none">
                         <i class="bi bi-archive text-danger mx-1"></i>
                     </a>
-                    <a href="#" onclick="mostrarDados('<?php echo $res[$i]['item'] ?>', '<?php echo $res[$i]['descricao'] ?>', '<?php echo $res[$i]['foto'] ?>', '<?php echo $nome_cat ?>', '<?php echo $nome_forn ?>', '<?php echo $tel_forn ?>')" title="Ver Descrição" style="text-decoration: none">
+                    <a href="#" onclick="mostrarDados('<?php echo $res[$i]['item'] ?>', '<?php echo $res[$i]['item'] ?>', '<?php echo $res[$i]['foto'] ?>', '<?php echo $nome_cat ?>', '<?php echo $nome_forn ?>', '<?php echo $tel_forn ?>')" title="Ver Descrição" style="text-decoration: none">
                         <i class="bi bi-card-text text-dark mx-1"></i>
-                    </a>
-                    <a href="#" onclick="comprarProdutos('<?php echo $res[$i]['id'] ?>', '<?php echo $res[$i]['valor_venda'] ?>', '<?php echo $res[$i]['lucro'] ?>', '<?php echo $res[$i]['valor_compra'] ?>')" title="Comprar Produtos" style="text-decoration: none">
-                        <i class="bi bi-bag text-success mx-1"></i>
                     </a>
                     <a target="_blank" title="Gerar Etiquetas" href="../rel/barras_class.php?codigo=<?php echo $res[$i]['codigo'] ?>" style="text-decoration: none">
                         <i class="bi bi-clipboard-check text-dark mx-1"></i>
                     </a>
-                    <a target="_blank" title="Gerar Etiquetas com Valor" href="../rel/barras_valor_class.php?codigo=<?php echo $res[$i]['codigo'] ?>&valor=<?php echo $res[$i]['valor_venda'] ?>&nome=<?php echo $res[$i]['nome'] ?>" style="text-decoration: none">
+                    <a target="_blank" title="Gerar Etiquetas com Valor" href="../rel/barras_valor_class.php?codigo=<?php echo $res[$i]['codigo'] ?>&valor=<?php echo $res[$i]['preco_unitario'] ?>&item=<?php echo $res[$i]['item'] ?>" style="text-decoration: none">
                         <i class="bi bi-clipboard-check text-danger mx-1"></i>
                     </a>
                 </td>
