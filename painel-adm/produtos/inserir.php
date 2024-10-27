@@ -1,96 +1,103 @@
 <?php 
 require_once("../../conexao.php");
 
-$nome = $_POST['nome'];
-$codigo = $_POST['codigo'];
-$valor_venda = $_POST['valor_venda'];
-$valor_venda = str_replace(',', '.', $valor_venda);
-$descricao = $_POST['descricao'];
 $categoria = $_POST['categoria'];
+$codigo = $_POST['codigo'];
+$item = $_POST['item'];
+$unidade = $_POST['unidade'];
+$preco_unitario = str_replace(',', '.', $_POST['preco_unitario']);
+$quantidade = $_POST['quantidade'];
 $estoque_min = $_POST['estoque_min'];
-$id = $_POST['id'];
+$valor_compra = str_replace(',', '.', $_POST['valor_compra']);
+$ipi = $_POST['ipi'];
+$percentual_custo = $_POST['percentual_custo'];
+$data = $_POST['data'];
 
-$antigo = $_POST['antigo'];
-$antigo2 = $_POST['antigo2'];
+// Função para verificar duplicidade apenas ao inserir
+function verificarDuplicidade($pdo, $item, $codigo) {
+    // Verificação de duplicidade do item
+    $query_con_item = $pdo->prepare("SELECT * FROM produtos WHERE item = :item");
+    $query_con_item->bindValue(":item", $item);
+    $query_con_item->execute();
+    if ($query_con_item->rowCount() > 0) {
+        return 'Produto já Cadastrado!';
+    }
 
-// EVITAR DUPLICIDADE NO NOME
-if($antigo != $nome){
-	$query_con = $pdo->prepare("SELECT * from produtos WHERE nome = :nome");
-	$query_con->bindValue(":nome", $nome);
-	$query_con->execute();
-	$res_con = $query_con->fetchAll(PDO::FETCH_ASSOC);
-	if(@count($res_con) > 0){
-		echo 'Produto já Cadastrado!';
-		exit();
-	}
+    // Verificação de duplicidade do código de referência
+    $query_con_codigo = $pdo->prepare("SELECT * FROM produtos WHERE codigo = :codigo");
+    $query_con_codigo->bindValue(":codigo", $codigo);
+    $query_con_codigo->execute();
+    if ($query_con_codigo->rowCount() > 0) {
+        return 'Código de Referência já Cadastrado!';
+    }
+
+    return null;
 }
 
+// Função para processar a imagem
+function processarImagem() {
+    if (@$_FILES['foto']['name'] == "") {
+        return "sem-foto.jpg"; // Valor padrão para novos registros
+    }
 
-// EVITAR DUPLICIDADE NO CÓDIGO
-if($antigo2 != $codigo){
-	$query_con = $pdo->prepare("SELECT * from produtos WHERE codigo = :codigo");
-	$query_con->bindValue(":codigo", $codigo);
-	$query_con->execute();
-	$res_con = $query_con->fetchAll(PDO::FETCH_ASSOC);
-	if(@count($res_con) > 0){
-		echo 'Código do Produto já Cadastrado!';
-		exit();
-	}
+    $nome_img = date('d-m-Y-H-i-s') . '-' . @$_FILES['foto']['name'];
+    $nome_img = preg_replace('/[ :]+/', '-', $nome_img);
+    $caminho = '../../img/produtos/' . $nome_img;
+    $imagem_temp = @$_FILES['foto']['tmp_name'];
+    $ext = pathinfo($nome_img, PATHINFO_EXTENSION);
+
+    if (in_array(strtolower($ext), ['jpg', 'jpeg'])) {
+        move_uploaded_file($imagem_temp, $caminho);
+        return $nome_img;
+    } else {
+        throw new Exception('Extensão de Imagem não permitida, use somente imagem jpg!!');
+    }
 }
 
+try {
+    // Processar a imagem
+    $foto = processarImagem();
 
+    // Verificação de duplicidade
+    $duplicidade = verificarDuplicidade($pdo, $item, $codigo);
+    if ($duplicidade) {
+        echo $duplicidade;
+        exit();
+    }
 
-//SCRIPT PARA SUBIR FOTO NO BANCO
-$nome_img = date('d-m-Y H:i:s') .'-'.@$_FILES['imagem']['name'];
-$nome_img = preg_replace('/[ :]+/' , '-' , $nome_img);
+    // Inserção
+    $res = $pdo->prepare("INSERT INTO produtos 
+        (categoria, codigo, foto, item, unidade, preco_unitario, quantidade, estoque_min, valor_compra, ipi, percentual_custo, data) 
+        VALUES 
+        (:categoria, :codigo, :foto, :item, :unidade, :preco_unitario, :quantidade, :estoque_min, :valor_compra, :ipi, :percentual_custo, :data)");
+    
+    $res->bindValue(":categoria", $categoria);
+    $res->bindValue(":codigo", $codigo);
+    $res->bindValue(":foto", $foto);
+    $res->bindValue(":item", $item);
+    $res->bindValue(":unidade", $unidade);
+    $res->bindValue(":preco_unitario", $preco_unitario);
+    $res->bindValue(":quantidade", $quantidade);
+    $res->bindValue(":estoque_min", $estoque_min);
+    $res->bindValue(":valor_compra", $valor_compra);
+    $res->bindValue(":ipi", $ipi);
+    $res->bindValue(":percentual_custo", $percentual_custo);
+    $res->bindValue(":data", $data);
+    $res->execute();
 
-$caminho = '../../img/produtos/' .$nome_img;
-if (@$_FILES['imagem']['name'] == ""){
-  $imagem = "sem-foto.jpg";
-}else{
-    $imagem = $nome_img;
+    echo 'Salvo com Sucesso!';
+} catch (PDOException $e) {
+    echo 'Erro: ' . $e->getMessage();
+} catch (Exception $e) {
+    echo 'Erro: ' . $e->getMessage();
 }
-
-$imagem_temp = @$_FILES['imagem']['tmp_name']; 
-$ext = pathinfo($imagem, PATHINFO_EXTENSION);   
-if($ext == 'JPG' or $ext == 'jpg' or $ext == 'jpeg'){ 
-move_uploaded_file($imagem_temp, $caminho);
-}else{
-	echo 'Extensão de Imagem não permitida, use somente imagem jpg!!';
-	exit();
-}
-
-
-
-if($id == ""){
-	$res = $pdo->prepare("INSERT INTO produtos SET codigo = :codigo, nome = :nome, descricao = :descricao, valor_venda = :valor_venda, categoria = :categoria, foto = :foto, estoque_min = '$estoque_min'");
-	$res->bindValue(":codigo", $codigo);
-	$res->bindValue(":nome", $nome);
-	$res->bindValue(":descricao", $descricao);
-	$res->bindValue(":valor_venda", $valor_venda);
-	$res->bindValue(":categoria", $categoria);
-	$res->bindValue(":foto", $imagem);
-	$res->execute();
-}else{
-
-	if($imagem != 'sem-foto.jpg'){
-		$res = $pdo->prepare("UPDATE produtos SET codigo = :codigo, nome = :nome, descricao = :descricao, valor_venda = :valor_venda, categoria = :categoria, foto = :foto, estoque_min = '$estoque_min' WHERE id = :id");
-		$res->bindValue(":foto", $imagem);
-	}else{
-		$res = $pdo->prepare("UPDATE produtos SET codigo = :codigo, nome = :nome, descricao = :descricao, valor_venda = :valor_venda, categoria = :categoria, estoque_min = '$estoque_min' WHERE id = :id");
-	}
-
-	
-	$res->bindValue(":codigo", $codigo);
-	$res->bindValue(":nome", $nome);
-	$res->bindValue(":descricao", $descricao);
-	$res->bindValue(":valor_venda", $valor_venda);
-	$res->bindValue(":categoria", $categoria);
-	$res->bindValue(":id", $id);
-	$res->execute();
-}
-
-
-
-echo 'Salvo com Sucesso!';
 ?>
+
+
+
+
+
+
+
+
+
