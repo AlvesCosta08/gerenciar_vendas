@@ -109,9 +109,9 @@ $id_usu = $res[0]['id'];
             Vendas / Ponto de Venda
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-           <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu9 ?>">Vendas</a></li>
+           <li><a class="dropdown-item disabled" href="index.php?pagina=<?php echo $menu9 ?>">Vendas</a></li>
 
-             <li><a class="dropdown-item disabled" href="index.php?pagina=<?php echo $menu10 ?>">Ponto de Venda</a></li>
+             <li><a class="dropdown-item" href="index.php?pagina=<?php echo $menu10 ?>">Ponto de Venda</a></li>
            
            
           </ul>
