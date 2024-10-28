@@ -1,20 +1,12 @@
 <?php 
 require_once("../../conexao.php");
-//@session_start();
-$id_usuario = $_POST['id_usuario'];
+@session_start();
+$id_usuario = $_SESSION['id_usuario'];
 
 //RECUPERAR O NOME DO CAIXA
 $query_con = $pdo->query("SELECT * FROM caixa WHERE operador = '$id_usuario' and status = 'Aberto'");
 $res = $query_con->fetchAll(PDO::FETCH_ASSOC);
-
-// Verifique se há resultados antes de acessar o índice 0
-if (count($res) > 0) {
-    $nome_caixa = $res[0]['caixa'];
-} else {
-    // Definir "Administrador" como nome do caixa quando não houver resultados
-    $nome_caixa = 'Administrador';
-}
-
+$nome_caixa = $res[0]['caixa'];
 
 echo '<ul class="order-list">';
 
@@ -55,13 +47,9 @@ if($total_reg > 0){
 
 echo '</ul>';
 echo '<h4 class="total mt-4">Total de Itens ('.$total_reg.') - Caixa '.$nome_caixa.'</h4>';
-echo '<div class="row"><div class="col-md-9"><h1>R$ <span id="sub_total">'.@$total_vendaF.'</span></h1>
-<small><small>(F2) Fechar Venda / (Alt) Buscar Produto</small></small>
-</div><div class="col-md-3" align="right"><a style="text-decoration:none" class="text-danger" href="index.php" title="Fechar Caixa ou Sair do PDV">
-<i class="bi bi-box-arrow-right"></i> <small>Sair</small> </a>
-
-</div>';
+echo '<div class="row"><div class="col-md-9"><h1>R$ <span id="sub_total">'.@$total_vendaF.'</span></h1></div><div class="col-md-3" align="right"><a style="text-decoration:none" class="text-danger" href="index.php" title="Fechar Caixa ou Sair do PDV"><i class="bi bi-box-arrow-right"></i> <small>Sair</small> </a></div>';
 
 
 
  ?>
+

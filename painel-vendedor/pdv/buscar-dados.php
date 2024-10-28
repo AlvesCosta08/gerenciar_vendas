@@ -1,11 +1,8 @@
 <?php 
 require_once("../../conexao.php");
-//@session_start();
-$id_usuario = $_POST['id_usuario'];
+@session_start();
+$id_usuario = $_SESSION['id_usuario'];
 $novo_estoque = '';
-$data_hoje = date('Y-m-d');
-
-$valor_totalF = 0;
 
 //RECUPERAR O ID DA ABERTURA
 $query_con = $pdo->query("SELECT * FROM caixa WHERE operador = '$id_usuario' and status = 'Aberto'");
@@ -26,25 +23,13 @@ $desconto = str_replace(',', '.', $desconto);
 $valor_recebido = $_POST['valor_recebido'];
 $valor_recebido = str_replace(',', '.', $valor_recebido);
 
-
-
 $forma_pgto_input = $_POST['forma_pgto_input'];
-$cliente_input = $_POST['cliente_input'];
-$data_pgto = $_POST['data_pgto'];
 
 //DEFINIR QUAL O TIPO DE PAGAMENTO E REDIRECIONAR PARA API
 if($forma_pgto_input == '2'){
 	//VAMOS REDIRECIONR PARA PAGAMENTO NO CRÉDITO
 }
 
-
-if($forma_pgto_input == '4'){
-	//VENDA FIADO
-	if($cliente_input == ""){
-		echo 'Selecione um Cliente!';
-		exit();
-	}
-}
 
 //FECHAR A VENDA
 if($forma_pgto_input != ""){
@@ -80,7 +65,7 @@ if($forma_pgto_input != ""){
 	}
 	
 
-	$res = $pdo->prepare("INSERT INTO vendas SET valor = :valor, data = curDate(), hora = curTime(),  operador = :usuario, valor_recebido = :valor_recebido, desconto = :desconto, troco = :troco, forma_pgto = :forma_pgto, abertura = :abertura, status = 'Concluída', cliente = '$cliente_input' ");
+	$res = $pdo->prepare("INSERT INTO vendas SET valor = :valor, data = curDate(), hora = curTime(),  operador = :usuario, valor_recebido = :valor_recebido, desconto = :desconto, troco = :troco, forma_pgto = :forma_pgto, abertura = :abertura, status = 'Concluída' ");
 	$res->bindValue(":valor_recebido", $valor_recebido);
 	$res->bindValue(":desconto", $desconto);
 	$res->bindValue(":valor", $total_compra);
@@ -91,12 +76,6 @@ if($forma_pgto_input != ""){
 	$res->execute();
 	$id_venda = $pdo->lastInsertId();
 
-	if(strtotime($data_pgto) > strtotime($data_hoje)){
-		//INSERIR NA TABELA DE CONTAS A RECEBER ESSA NOVA CONTA DO CLIENTE
-	$pdo->query("INSERT INTO contas_receber SET descricao = 'Venda', valor = '$total_compra', usuario = '$id_usuario',  pago = 'Não', data = curDate(), vencimento = '$data_pgto', arquivo = 'sem-foto.jpg', data_pgto = '', cliente = '$cliente_input', id_venda = '$id_venda' ");
-	
-	}	
-	
 	//RELACIONAR OS ITENS DA VENDA COM A NOVA VENDA
 	$query_con = $pdo->query("UPDATE itens_venda SET venda = '$id_venda' WHERE usuario = '$id_usuario' and venda = 0");
 
@@ -112,11 +91,6 @@ if($desconto == ""){
 }
 
 
-if($codigo != ""){
-
-$valor_unit = $_POST['valor_unitario'];
-$valor_unit = str_replace(',', '.', $valor_unit);
-
 
 $query_con = $pdo->query("SELECT * FROM produtos WHERE codigo = '$codigo'");
 $res = $query_con->fetchAll(PDO::FETCH_ASSOC);
@@ -128,24 +102,10 @@ if(@count($res) > 0){
 	$valor = $res[0]['valor_venda'];
 	$id = $res[0]['id'];
 
-	if($valor == 0){
-	if($valor_unit == "" || $valor_unit <= 0){
-	echo 'Preencha um Valor para o Produto!';
-	exit();
-}
-}
-
-
-	if($estoque < $quantidade and $valor != "0"){
+	if($estoque < $quantidade){
 		echo 'Quantidade em Estoque Insuficiente!&-/z Por enquanto temos '.$estoque .' Produtos em Estoque';
 		exit();
 	}
-
-	if($valor <= 0){
-		$valor = $valor_unit;
-	}
-
-	
 
 	$valor_total = $valor * $quantidade;
 	$valor_totalF =  number_format($valor_total, 2, ',', '.');
@@ -161,21 +121,17 @@ if(@count($res) > 0){
 	
 	$res->execute();
 
-	if($estoque > 0){
-		//ABATER OS PRODUTOS DO ESTOQUE
-		$novo_estoque = $estoque - $quantidade;
-		$res = $pdo->prepare("UPDATE produtos SET estoque = :estoque WHERE id = '$id'");
-		$res->bindValue(":estoque", $novo_estoque);
-		$res->execute();
-	}
+
+	//ABATER OS PRODUTOS DO ESTOQUE
+	$novo_estoque = $estoque - $quantidade;
+	$res = $pdo->prepare("UPDATE produtos SET estoque = :estoque WHERE id = '$id'");
+	$res->bindValue(":estoque", $novo_estoque);
+	$res->execute();
 
 
 
-}else{
-	echo 'Código do Produto não Encontrado!';
-		exit();
 }
-}
+
 
 
 
@@ -224,10 +180,11 @@ if($total_reg > 0){
 }
 
 
-$dados = $novo_estoque .'&-/z'. $nome .'&-/z'. $descricao .'&-/z'. $imagem .'&-/z'. $valor .'&-/z'. $valor_total .'&-/z'. $valor_totalF .'&-/z'. $total_venda .'&-/z'. @$total_vendaF .'&-/z'. $troco .'&-/z'. $trocoF;
+$dados = $novo_estoque .'&-/z'. $nome .'&-/z'. $descricao .'&-/z'. $imagem .'&-/z'. $valor .'&-/z'. $valor_total .'&-/z'. $valor_totalF .'&-/z'. $total_venda .'&-/z'. $total_vendaF .'&-/z'. $troco .'&-/z'. $trocoF;
 	echo $dados;
 
 
 
 
  ?>
+
