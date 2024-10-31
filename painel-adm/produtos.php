@@ -45,18 +45,6 @@ require_once('verificar-permissao.php');
             $res_2 = $query_2->fetchAll(PDO::FETCH_ASSOC);
             $nome_cat = $res_2[0]['nome'];
 
-            // BUSCAR OS DADOS DO FORNECEDOR
-            $id_forn = $res[$i]['fornecedor'];
-            $query_f = $pdo->query("SELECT * from fornecedores where id = '$id_forn'");
-            $res_f = $query_f->fetchAll(PDO::FETCH_ASSOC);
-            $total_reg_f = @count($res_f);
-            if ($total_reg_f > 0) { 
-                $nome_forn = $res_f[0]['nome'];
-                $tel_forn = $res_f[0]['telefone'];
-            } else {
-                $nome_forn = '';
-                $tel_forn = '';
-            }
         ?>
             <tr>
                 <td><?php echo $res[$i]['codigo'] ?></td>

@@ -1,0 +1,190 @@
+[27-Oct-2024 15:40:58 America/Sao_Paulo] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php:7
+Stack trace:
+#0 /home2/codig267/public_html/ger_vendas/rel/barras_valor.php(7): number_format('', 2, ',', '.')
+#1 {main}
+  thrown in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 7
+[27-Oct-2024 15:40:58 America/Fortaleza] PHP Warning:  file_get_contents(http://codigoquatro.com.br/ger_vendas/rel/barras_valor.php?codigo=1&amp;nome=&amp;valor=): Failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home2/codig267/public_html/ger_vendas/rel/barras_valor_class.php on line 10
+[27-Oct-2024 15:41:06 America/Sao_Paulo] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php:7
+Stack trace:
+#0 /home2/codig267/public_html/ger_vendas/rel/barras_valor.php(7): number_format('', 2, ',', '.')
+#1 {main}
+  thrown in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 7
+[27-Oct-2024 15:41:06 America/Fortaleza] PHP Warning:  file_get_contents(http://codigoquatro.com.br/ger_vendas/rel/barras_valor.php?codigo=1&amp;nome=&amp;valor=): Failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home2/codig267/public_html/ger_vendas/rel/barras_valor_class.php on line 10
+[27-Oct-2024 15:41:19 America/Sao_Paulo] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php:7
+Stack trace:
+#0 /home2/codig267/public_html/ger_vendas/rel/barras_valor.php(7): number_format('', 2, ',', '.')
+#1 {main}
+  thrown in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 7
+[27-Oct-2024 15:41:19 America/Fortaleza] PHP Warning:  file_get_contents(http://codigoquatro.com.br/ger_vendas/rel/barras_valor.php?codigo=818&amp;nome=&amp;valor=): Failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home2/codig267/public_html/ger_vendas/rel/barras_valor_class.php on line 10
+[27-Oct-2024 15:41:45 America/Sao_Paulo] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #1 ($num) must be of type float, string given in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php:7
+Stack trace:
+#0 /home2/codig267/public_html/ger_vendas/rel/barras_valor.php(7): number_format('', 2, ',', '.')
+#1 {main}
+  thrown in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 7
+[27-Oct-2024 15:41:45 America/Fortaleza] PHP Warning:  file_get_contents(http://codigoquatro.com.br/ger_vendas/rel/barras_valor.php?codigo=985&amp;nome=&amp;valor=): Failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home2/codig267/public_html/ger_vendas/rel/barras_valor_class.php on line 10
+[27-Oct-2024 15:46:13 America/Sao_Paulo] PHP Warning:  Undefined array key "item" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 5
+[27-Oct-2024 15:46:13 America/Sao_Paulo] PHP Warning:  Undefined array key "preco_unitario" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 6
+[27-Oct-2024 15:49:30 America/Sao_Paulo] PHP Warning:  Undefined array key "item" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 5
+[27-Oct-2024 15:49:30 America/Sao_Paulo] PHP Warning:  Undefined array key "preco_unitario" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 6
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined array key "item" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 5
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined array key "preco_unitario" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 6
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $nome in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:53:11 America/Sao_Paulo] PHP Warning:  Undefined variable $valor in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 40
+[27-Oct-2024 15:56:11 America/Sao_Paulo] PHP Warning:  Undefined array key "item" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 5
+[27-Oct-2024 15:56:11 America/Sao_Paulo] PHP Warning:  Undefined array key "preco_unitario" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 6
+[27-Oct-2024 16:00:56 America/Sao_Paulo] PHP Warning:  Undefined array key "item" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 5
+[27-Oct-2024 16:00:56 America/Sao_Paulo] PHP Warning:  Undefined array key "preco_unitario" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 6
+[27-Oct-2024 16:01:28 America/Sao_Paulo] PHP Warning:  Undefined array key "item" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 5
+[27-Oct-2024 16:01:28 America/Sao_Paulo] PHP Warning:  Undefined array key "preco_unitario" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 6
+[27-Oct-2024 16:03:46 America/Sao_Paulo] PHP Warning:  Undefined array key "item" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 5
+[27-Oct-2024 16:03:46 America/Sao_Paulo] PHP Warning:  Undefined variable $preco_unitario in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 7
+[27-Oct-2024 16:06:00 America/Sao_Paulo] PHP Warning:  Undefined array key "item" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 5
+[27-Oct-2024 16:09:20 America/Fortaleza] PHP Warning:  Undefined array key "nome" in /home2/codig267/public_html/ger_vendas/rel/barras_valor_class.php on line 6
+[27-Oct-2024 16:09:20 America/Sao_Paulo] PHP Warning:  Undefined array key "item" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 5
+[27-Oct-2024 16:25:33 America/Sao_Paulo] PHP Warning:  Undefined variable $classeSaldo in /home2/codig267/public_html/ger_vendas/rel/fluxocaixa.php on line 303
+[27-Oct-2024 16:50:11 America/Fortaleza] PHP Warning:  Undefined array key "nome" in /home2/codig267/public_html/ger_vendas/rel/barras_valor_class.php on line 6
+[27-Oct-2024 16:50:11 America/Sao_Paulo] PHP Warning:  Undefined array key "item" in /home2/codig267/public_html/ger_vendas/rel/barras_valor.php on line 5
+[29-Oct-2024 04:51:37 America/Sao_Paulo] PHP Warning:  Undefined variable $classeSaldo in /home2/codig267/public_html/ger_vendas/rel/fluxocaixa.php on line 303
+[29-Oct-2024 04:51:48 America/Sao_Paulo] PHP Warning:  Undefined variable $classeSaldo in /home2/codig267/public_html/ger_vendas/rel/fluxocaixa.php on line 303

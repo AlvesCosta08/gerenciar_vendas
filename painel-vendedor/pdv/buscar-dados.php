@@ -2,7 +2,6 @@
 require_once("../../conexao.php");
 @session_start();
 $id_usuario = $_SESSION['id_usuario'];
-$novo_estoque = '';
 
 //RECUPERAR O ID DA ABERTURA
 $query_con = $pdo->query("SELECT * FROM caixa WHERE operador = '$id_usuario' and status = 'Aberto'");
@@ -25,26 +24,17 @@ $valor_recebido = str_replace(',', '.', $valor_recebido);
 
 $forma_pgto_input = $_POST['forma_pgto_input'];
 
-//DEFINIR QUAL O TIPO DE PAGAMENTO E REDIRECIONAR PARA API
-if($forma_pgto_input == '2'){
-	//VAMOS REDIRECIONR PARA PAGAMENTO NO CRÉDITO
-}
-
-
 //FECHAR A VENDA
 if($forma_pgto_input != ""){
-
 	$troco = $_POST['valor_troco'];
 	$troco = str_replace('R$', '', $troco);
-	$troco = str_replace('.', '', $troco);
 	$troco = str_replace(',', '.', $troco);
 
 	$total_compra = $_POST['total_compra'];
 	$total_compra = str_replace('R$', '', $total_compra);
-	$total_compra = str_replace('.', '', $total_compra);
 	$total_compra = str_replace(',', '.', $total_compra);
 
-
+	
 	if($total_compra <= 0){
 		echo 'Não é possível efetuar uma venda sem itens!';
 		exit();
@@ -79,7 +69,7 @@ if($forma_pgto_input != ""){
 	//RELACIONAR OS ITENS DA VENDA COM A NOVA VENDA
 	$query_con = $pdo->query("UPDATE itens_venda SET venda = '$id_venda' WHERE usuario = '$id_usuario' and venda = 0");
 
-	echo 'Venda Salva!&-/z'.$id_venda;
+	echo 'Venda Salva!';
 	exit();
 }
 
@@ -95,11 +85,11 @@ if($desconto == ""){
 $query_con = $pdo->query("SELECT * FROM produtos WHERE codigo = '$codigo'");
 $res = $query_con->fetchAll(PDO::FETCH_ASSOC);
 if(@count($res) > 0){
-	$estoque = $res[0]['estoque'];
-	$nome = $res[0]['nome'];
-	$descricao = $res[0]['descricao'];
+	$estoque = $res[0]['quantidade'];
+	$nome = $res[0]['item'];
+	$descricao = $res[0]['item'];
 	$imagem = $res[0]['foto'];
-	$valor = $res[0]['valor_venda'];
+	$valor = $res[0]['preco_unitario'];
 	$id = $res[0]['id'];
 
 	if($estoque < $quantidade){
@@ -112,7 +102,7 @@ if(@count($res) > 0){
 
 
 	//INSERIR NA TABELA ITENS VENDAS
-	$res = $pdo->prepare("INSERT INTO itens_venda SET produto = :produto, valor_unitario = :valor, usuario = :usuario, venda = '0', quantidade = :quantidade, valor_total = :valor_total, data = curDate()");
+	$res = $pdo->prepare("INSERT INTO itens_venda SET produto = :produto, valor_unitario = :valor, usuario = :usuario, venda = '0', quantidade = :quantidade, valor_total = :valor_total");
 	$res->bindValue(":produto", $id);
 	$res->bindValue(":valor", $valor);
 	$res->bindValue(":usuario", $id_usuario);
@@ -124,7 +114,7 @@ if(@count($res) > 0){
 
 	//ABATER OS PRODUTOS DO ESTOQUE
 	$novo_estoque = $estoque - $quantidade;
-	$res = $pdo->prepare("UPDATE produtos SET estoque = :estoque WHERE id = '$id'");
+	$res = $pdo->prepare("UPDATE produtos SET quantidade = :estoque WHERE id = '$id'");
 	$res->bindValue(":estoque", $novo_estoque);
 	$res->execute();
 
@@ -187,4 +177,6 @@ $dados = $novo_estoque .'&-/z'. $nome .'&-/z'. $descricao .'&-/z'. $imagem .'&-/
 
 
  ?>
+
+
 

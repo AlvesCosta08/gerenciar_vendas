@@ -216,27 +216,15 @@ if($desconto_porcentagem == 'Sim'){
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Fechar Venda - Total: <span id="total-modal-venda"></span></h4>
-        <a type="button" class="btn-close" href="pdv.php" aria-label="Close"></a>
+        <h4 class="modal-title">Fechar Venda</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form method="POST" id="form-fechar-venda">
         <div class="modal-body">
 
-          <?php 
-              $query = $pdo->query("SELECT * from forma_pgtos order by id asc limit 6");
-              $res = $query->fetchAll(PDO::FETCH_ASSOC);
-              $total_reg = @count($res);
-              if($total_reg > 0){ 
-
-                for($i=0; $i < $total_reg; $i++){
-                  foreach ($res[$i] as $key => $value){ }
-                    ?>
-                  <span class=""><small><small><?php echo $i + 1 ?> - <?php echo $res[$i]['nome'] ?> / </small></small></span>  
-                <?php } } ?>
-
           <div class="mb-3">
-            
-            <select class="form-select form-select-sm mt-1" aria-label="Default select example" name="forma_pgto" id="forma_pgto">
+            <label for="exampleFormControlInput1" class="form-label">Forma de Pagamento</label>
+            <select class="form-select mt-1" aria-label="Default select example" name="forma_pgto" id="forma_pgto">
               <?php 
               $query = $pdo->query("SELECT * from forma_pgtos order by id asc");
               $res = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -261,14 +249,14 @@ if($desconto_porcentagem == 'Sim'){
           </div>  
 
 
-          <input type="hidden" id="textovenda">
+          
           <small><div align="center" class="mt-1" id="mensagem-venda">
 
           </div> </small>
 
         </div>
         <div class="modal-footer">
-          <a type="button" id="btn-fechar-venda" class="btn btn-secondary" href="pdv.php">Fechar</a>
+          <button type="button" id="btn-fechar-venda" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
           <button name="btn-venda" id="btn-venda" type="submit" class="btn btn-success">Fechar Venda</button>
 
           
@@ -301,6 +289,12 @@ if($desconto_porcentagem == 'Sim'){
 
 <!--AJAX PARA BUSCAR DADOS PARA OS INPUTS -->
 
+<script type="text/javascript">
+  $("#codigo").keyup(function () {
+    buscarDados();
+  });
+</script>
+
 
 <script type="text/javascript">
   var pag = "<?=$pag?>";
@@ -315,7 +309,12 @@ if($desconto_porcentagem == 'Sim'){
 
         $('#mensagem-venda').text("");
 
-
+        if(result.trim() === "Venda Salva!"){
+          
+          $('#btn-fechar-venda').click();
+           window.location = "pdv.php";
+           return;
+        }
 
         if(result.trim() === "Não é possível efetuar uma venda sem itens!"){
           $('#mensagem-venda').addClass('text-danger')
@@ -326,22 +325,11 @@ if($desconto_porcentagem == 'Sim'){
 
         var array = result.split("&-/z");
 
-        if(array[0] === "Venda Salva!"){
-          
-          //$('#btn-fechar-venda').click();
-          
-          let a= document.createElement('a');
-          a.target= '_blank';
-          a.href= 'comprovante_class.php?id=' + array[1];
-          a.click();
-          return;
-        }
-
 
         if(array.length == 2){
            var ms1 = array[0];
            var ms2 = array[1];
-           
+           window.alert(ms1 + ms2)
         }else{
 
         var estoque = array[0];
@@ -359,7 +347,7 @@ if($desconto_porcentagem == 'Sim'){
         
         
         document.getElementById('total_compra').value = 'R$ ' + totalVendaF; 
-        $('#total-modal-venda').text('R$ ' + totalVendaF);
+
                
 
         document.getElementById('valor_troco').value = 'R$ ' + trocoF; 
@@ -387,8 +375,11 @@ if($desconto_porcentagem == 'Sim'){
 
          valor_format = "R$ " + valor.replace(".",",");
          document.getElementById('total_item').value = valor_format;
-         
+
+
          document.getElementById('sub_total_item').value = 'R$ ' + subtotalF;
+
+
 
 
          document.getElementById('codigo').value = "";
@@ -518,76 +509,14 @@ if($desconto_porcentagem == 'Sim'){
 
 
 <script type="text/javascript">
-  $(document).keyup(function(e) {
-
-    if(e.keyCode === 27){
+  $(document).keypress(function(e) {
+    if(e.which == 13){
       var myModal = new bootstrap.Modal(document.getElementById('modalVenda'), {
 
     })
 
     myModal.show();
     }
-
-
-    var codigo = $("#codigo").val();
-    if(codigo === ''){
-      if($("#textovenda").val() === ''){
-         if(e.keyCode === 13){
-          $("#textovenda").val('aberto'); 
-              var myModal = new bootstrap.Modal(document.getElementById('modalVenda'), {
-               backdrop: 'static',
-               })
-
-             myModal.show();
-          }
-      }else{
-        if(e.keyCode === 13){
-            $('#btn-venda').click();
-        }
-
-        if(e.keyCode === 49|| e.keyCode === 97){
-          document.getElementById("forma_pgto").options.selectedIndex = 0;
-          $('#forma_pgto').val($('#forma_pgto').val()).change();
-        }
-
-        if(e.keyCode === 50|| e.keyCode === 98){
-          document.getElementById("forma_pgto").options.selectedIndex = 1;
-          $('#forma_pgto').val($('#forma_pgto').val()).change();
-        }
-
-        if(e.keyCode === 51|| e.keyCode === 99){
-          document.getElementById("forma_pgto").options.selectedIndex = 2;
-          $('#forma_pgto').val($('#forma_pgto').val()).change();
-        }
-
-
-        if(e.keyCode === 52|| e.keyCode === 100){
-          document.getElementById("forma_pgto").options.selectedIndex = 3;
-          $('#forma_pgto').val($('#forma_pgto').val()).change();
-        }
-
-        if(e.keyCode === 53|| e.keyCode === 101){
-          document.getElementById("forma_pgto").options.selectedIndex = 4;
-          $('#forma_pgto').val($('#forma_pgto').val()).change();
-        }
-
-        if(e.keyCode === 54|| e.keyCode === 102){
-          document.getElementById("forma_pgto").options.selectedIndex = 5;
-          $('#forma_pgto').val($('#forma_pgto').val()).change();
-        }
-
-      }
- 
-    }
-    else{
-      if(e.keyCode === 13){
-      buscarDados();
-      }
-    }
-
-
-
-    
 });
 </script>
 
@@ -601,6 +530,3 @@ if($desconto_porcentagem == 'Sim'){
         buscarDados();
     })
   </script>
-
-
-
